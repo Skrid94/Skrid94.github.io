@@ -24,29 +24,31 @@
             <nav>
                   
                 <ul>
-                        <li><a href='Home.html'>Home</a></li>
+                        <li><a class='Ba' href='index.html'>Home</a></li>
                         
                         <li class='dropdown'>  
                             
-                            <a href='javascript:void(0)' class='dropbtn'>Areas</a>
+                            <a href='javascript:void(0)' class='Ba'>Areas</a>
                             
                         <div class='dropdown-content'>
-                            <a href='Brooklyn.html'>Brooklyn</a>
-                            <a href='Queens.html'>Queens</a>
-                            <a href='New Jersey.html'>New Jersey</a>
-                            <a href='Manteca.html'>Manteca</a>
-                            <a href='Bakersfield.html'>Bakersfield</a>  
+                            <a class='Ba' href='Brooklyn.html'>Brooklyn</a>
+                            <a class='Ba' href='Queens.html'>Queens</a>
+                            <a class='Ba' href='New Jersey.html'>New Jersey</a>
+                            <a class='Ba' href='Manteca.html'>Manteca</a>
+                            <a class='Ba' href='Bakersfield.html'>Bakersfield</a>  
                         </div>
                         
                     </li>
                     
-                    <li><a href='Tracker.html'>Tracker</a></li>
+                    <li><a class='Ba' href='Tracker.html'>Tracker</a></li>
                       
                 </ul>
                     
+                   
             </nav>
             
             <main>
+                <div>
         
                     <iframe id='Brooklyn' src='https://docs.google.com/spreadsheets/d/e/2PACX-1vSzrL1NrT6gDVUPDsBCPWdUACqv5JfdxAgF7ePCrRsATOR2M2A529vxFWAZqANUpfQqwBoXNkT7aGXZ/pubhtml?gid=2132673043&amp;single=true&amp;range=B6:AJ26&amp;widget=false&amp;chrome=false' frameborder='0'></iframe>
                 
@@ -126,118 +128,41 @@
           });
           map.fitBounds(bounds);
         });
-          // Define the LatLng coordinates for the polygon's path. https://developers.google.com/maps/documentation/javascript/shapes
-        var Area = [
-          {lat: 40.95916 , lng: -73.38258}, 
- {lat: 40.95934 , lng: -73.40761}, 
- {lat: 40.95692 , lng: -73.41464}, 
- {lat: 40.92831 , lng: -73.40867}, 
- {lat: 40.91318 , lng: -73.41953}, 
- {lat: 40.93371 , lng: -73.42729}, 
- {lat: 40.95036 , lng: -73.46287}, 
- {lat: 40.95122 , lng: -73.48929}, 
- {lat: 40.92589 , lng: -73.50366}, 
- {lat: 40.89167 , lng: -73.47859}, 
- {lat: 40.87662 , lng: -73.47566},
-  {lat: 40.90259 , lng: -73.49677}, 
- {lat: 40.92131 , lng: -73.52147}, 
- {lat: 40.91785 , lng: -73.53854}, 
- {lat: 40.91898 , lng: -73.56616}, 
- {lat: 40.90748 , lng: -73.63823},
-  {lat: 40.88073 , lng: -73.66176}, 
- {lat: 40.8382 , lng: -73.65863}, 
- {lat: 40.86008 , lng: -73.67472}, 
- {lat: 40.87655 , lng: -73.71172},
-  {lat: 40.86923 , lng: -73.73165}, 
- {lat: 40.86466 , lng: -73.7387}, 
- {lat: 40.84379 , lng: -73.74132}, 
- {lat: 40.83155 , lng: -73.72928}, 
- {lat: 40.83222 , lng: -73.72548},
-  {lat: 40.83626 , lng: -73.7144}, 
- {lat: 40.82523 , lng: -73.70727},
-  {lat: 40.81137 , lng: -73.71203}, 
- {lat: 40.82232 , lng: -73.71936}, 
- {lat: 40.82968 , lng: -73.73299}, 
- {lat: 40.83693 , lng: -73.74601}, 
- {lat: 40.844 , lng: -73.75743},
-  {lat: 40.83797 , lng: -73.7626},
-  {lat: 40.81215 , lng: -73.76951},
-  {lat: 40.7903 , lng: -73.75819}, 
- {lat: 40.77236 , lng: -73.75832},
-  {lat: 40.78457 , lng: -73.76738},
-  {lat: 40.79653 , lng: -73.7642},
-  {lat: 40.80223 , lng: -73.77159},
-  {lat: 40.79854 , lng: -73.78741}, 
- {lat: 40.80465 , lng: -73.81917},
-  {lat: 40.79919 , lng: -73.85317}, 
- {lat: 40.78774 , lng: -73.86968}, 
- {lat: 40.78312 , lng: -73.87511}, 
- {lat: 40.78357 , lng: -73.88484}, 
- {lat: 40.79266 , lng: -73.90332}, 
- {lat: 40.79136 , lng: -73.91407}, 
- {lat: 40.78463 , lng: -73.91925}, 
- {lat: 40.77802 , lng: -73.92906}, 
- {lat: 40.78048 , lng: -73.93406}, 
- {lat: 40.77719 , lng: -73.93898},
-  {lat: 40.77127 , lng: -73.93879},
-  {lat: 40.74401 , lng: -73.96357}, 
- {lat: 40.73172 , lng: -73.96693}, 
- {lat: 40.71006 , lng: -73.9751},
-  {lat: 40.70421 , lng: -74.00175}, 
- {lat: 40.69198 , lng: -74.00972},
-  {lat: 40.68106 , lng: -74.02428}, 
- {lat: 40.66337 , lng: -74.02387}, 
- {lat: 40.6405 , lng: -74.04573}, 
- {lat: 40.61715 , lng: -74.05511},
-  {lat: 40.56954 , lng: -74.01401},
-  {lat: 40.56493 , lng: -73.99756}, 
- {lat: 40.57854 , lng: -73.90419},
-  {lat: 40.57392 , lng: -73.89304}, 
- {lat: 40.57977 , lng: -73.87353}, 
- {lat: 40.59937 , lng: -73.87528}, 
- {lat: 40.61387 , lng: -73.88646}, 
- {lat: 40.62789 , lng: -73.87659}, 
- {lat: 40.63958 , lng: -73.85553}, 
- {lat: 40.64465 , lng: -73.82611}, 
- {lat: 40.63181 , lng: -73.79492}, 
- {lat: 40.6207 , lng: -73.77589}, 
- {lat: 40.61102 , lng: -73.77938},
-  {lat: 40.59299 , lng: -73.81513},
-  {lat: 40.58769 , lng: -73.84819}, 
- {lat: 40.57044 , lng: -73.88437}, 
- {lat: 40.57243 , lng: -73.89905},
-  {lat: 40.55381 , lng: -73.95364}, 
- {lat: 40.53755 , lng: -73.94271}, 
- {lat: 40.58069 , lng: -73.78324}, 
- {lat: 40.58104 , lng: -73.58394}, 
- {lat: 40.59219 , lng: -73.57398}, 
- {lat: 40.63868 , lng: -73.47519}, 
- {lat: 40.66235 , lng: -73.3213}, 
- {lat: 40.69937 , lng: -73.23396}, 
- {lat: 40.69161 , lng: -73.14938},
-  {lat: 40.71248 , lng: -73.11629},
-  {lat: 40.71981 , lng: -73.06123}, 
- {lat: 40.9333 , lng: -73.15058}, 
- {lat: 40.9165 , lng: -73.24027}, 
- {lat: 40.93615 , lng: -73.33752}, 
- {lat: 40.93949 , lng: -73.36331},
+          
+          // Define the LatLng coordinates for the polygon's path.
+  var triangleCoords = [
+    {lat: 40.86862 , lng: -73.73277}, {lat: 40.8581 , lng: -73.73165}, {lat: 40.84998 , lng: -73.74278}, {lat: 40.82782 , lng: -73.72668}, {lat: 40.83163 , lng: -73.73668}, {lat: 40.84393 , lng: -73.75048}, {lat: 40.84223 , lng: -73.75695}, {lat: 40.82961 , lng: -73.7617}, {lat: 40.82201 , lng: -73.76271}, {lat: 40.80939 , lng: -73.76863}, {lat: 40.79896 , lng: -73.76015}, {lat: 40.77241 , lng: -73.75923}, {lat: 40.79396 , lng: -73.76654}, {lat: 40.80042 , lng: -73.77592}, {lat: 40.79702 , lng: -73.7905}, {lat: 40.80322 , lng: -73.82242}, {lat: 40.81406 , lng: -73.80666}, {lat: 40.84255 , lng: -73.79776}, {lat: 40.90691 , lng: -73.75743}, {lat: 40.93025 , lng: -73.71186}, {lat: 40.94244 , lng: -73.6857}, {lat: 40.95916 , lng: -73.67434}, {lat: 40.97484 , lng: -73.64684}, {lat: 40.98712 , lng: -73.6607}, {lat: 41.00094 , lng: -73.66117}, {lat: 41.01356 , lng: -73.65593}, {lat: 41.05432 , lng: -73.69145}, {lat: 41.1006 , lng: -73.72816}, {lat: 41.12719 , lng: -73.67149}, {lat: 41.15481 , lng: -73.76725}, {lat: 41.17529 , lng: -73.88388}, {lat: 41.09319 , lng: -73.8823}, {lat: 41.01371 , lng: -73.89013}, {lat: 40.911 , lng: -73.92071}, {lat: 40.83256 , lng: -73.96364}, {lat: 40.81045 , lng: -73.97618}, {lat: 40.7864 , lng: -73.91996}, {lat: 40.77906 , lng: -73.93649}, {lat: 40.74492 , lng: -73.96503}, {lat: 40.7271 , lng: -73.9655}, {lat: 40.70823 , lng: -73.97559}, {lat: 40.70641 , lng: -73.99303}, {lat: 40.70069 , lng: -74.00455}, {lat: 40.68741 , lng: -74.01058}, {lat: 40.67843 , lng: -74.0239}, {lat: 40.65961 , lng: -74.02231}, {lat: 40.63376 , lng: -74.04614}, {lat: 40.61422 , lng: -74.04532}, {lat: 40.60079 , lng: -74.03839}, {lat: 40.59538 , lng: -74.01673}, {lat: 40.5859 , lng: -74.0107}, {lat: 40.57646 , lng: -74.01834}, {lat: 40.56731 , lng: -74.00773}, {lat: 40.56834 , lng: -73.98114}, {lat: 40.57172 , lng: -73.95009}, {lat: 40.57616 , lng: -73.92494}, {lat: 40.58026 , lng: -73.90441}, {lat: 40.57475 , lng: -73.89551}, {lat: 40.5795 , lng: -73.87442}, {lat: 40.58655 , lng: -73.87326}, {lat: 40.60819 , lng: -73.88127}, {lat: 40.62149 , lng: -73.88853}, {lat: 40.63282 , lng: -73.86985}, {lat: 40.64214 , lng: -73.85055}, {lat: 40.64497 , lng: -73.82305}, {lat: 40.63701 , lng: -73.80449}, {lat: 40.63016 , lng: -73.78938}, {lat: 40.62179 , lng: -73.77495}, {lat: 40.60829 , lng: -73.78791}, {lat: 40.60158 , lng: -73.80568}, {lat: 40.58866 , lng: -73.82885}, {lat: 40.58786 , lng: -73.8491}, {lat: 40.57459 , lng: -73.87598}, {lat: 40.56285 , lng: -73.92984}, {lat: 40.55536 , lng: -73.945}, {lat: 40.53977 , lng: -73.9435}, {lat: 40.55979 , lng: -73.8761}, {lat: 40.58127 , lng: -73.8084}, {lat: 40.58523 , lng: -73.76872}, {lat: 40.57772 , lng: -73.71874}, {lat: 40.58098 , lng: -73.57911}, {lat: 40.63161 , lng: -73.53745}, {lat: 40.64314 , lng: -73.44567}, {lat: 40.65356 , lng: -73.36966}, {lat: 40.67543 , lng: -73.31381}, {lat: 40.68429 , lng: -73.25704}, {lat: 40.7016 , lng: -73.23289}, {lat: 40.69184 , lng: -73.15107}, {lat: 40.71396 , lng: -73.06569}, {lat: 40.98703 , lng: -73.09316}, {lat: 40.97538 , lng: -73.1365}, {lat: 40.94343 , lng: -73.29359}, {lat: 40.93429 , lng: -73.35181}, {lat: 40.96581 , lng: -73.39683}, {lat: 40.9508 , lng: -73.47528}, {lat: 40.94549 , lng: -73.49643}, {lat: 40.91857 , lng: -73.49968}, {lat: 40.91067 , lng: -73.48985}, {lat: 40.89141 , lng: -73.47635}, {lat: 40.87606 , lng: -73.47681}, {lat: 40.89135 , lng: -73.48414}, {lat: 40.91251 , lng: -73.50778}, {lat: 40.92225 , lng: -73.52146}, {lat: 40.91508 , lng: -73.54855}, {lat: 40.91882 , lng: -73.56947}, {lat: 40.91399 , lng: -73.58454}, {lat: 40.9079 , lng: -73.60329}, {lat: 40.9057 , lng: -73.63612}, {lat: 40.89222 , lng: -73.65097}, {lat: 40.87224 , lng: -73.66069}, {lat: 40.84049 , lng: -73.65883}, {lat: 40.85965 , lng: -73.67345}, {lat: 40.86731 , lng: -73.68827}, {lat: 40.87432 , lng: -73.71927}
+  ];
 
-        ];
-
-        // Construct the polygon.
-        var brooklynmap = new google.maps.Polygon({
-          paths: Area,
-          strokeColor: '#8e7cc3',
-          strokeOpacity: 0,
-          strokeWeight: 0,
-          fillColor: '#8e7cc3',
-          fillOpacity: .75
-        });
-        brooklynmap.setMap(map);
-      }
+  // Construct the polygon.
+  var bermudaTriangle = new google.maps.Polygon({
+    paths: triangleCoords,
+    strokeColor: '#351c75',
+    strokeOpacity: 0.8,
+    strokeWeight: 2,
+    fillColor: '#b4a7d6',
+    fillOpacity: 0.50
+  });
+  bermudaTriangle.setMap(map);
+}
     </script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBjlm5bAx930RBvKscTLF-2WFwcxPPnDZw&libraries=places&callback=initMap"></script>
                     
+                </div>
+                </div>
+                
+                <div id='Bottom'>
+                    <section id='notes'>
+                     <h2>Area Notes</h2>
+                        <p class='note'></p>
+                    </section>
+                    
+                    <section id='Bbuttons'>
+                        <a href='https://www.google.com/get/sunroof#p=0' target='_blank'>Project Sunroof</a>
+                        
+                        <a href='https://docs.google.com/forms/d/e/1FAIpQLScLsNTiOvBiZMW60TXUJzX9aOmjkTJLfgwaAG-U0o5HeeQgEA/viewform' target='popup' onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLScLsNTiOvBiZMW60TXUJzX9aOmjkTJLfgwaAG-U0o5HeeQgEA/viewform','Submission','width=600,height=400')">Submission tool</a>
+                    </section>
+                
                 </div>
   
                 
@@ -245,7 +170,7 @@
             
             <footer>		
                 
-				  <p>&copy; 2017 1st Light Energy | Alden Dirks</p> 
+				  <p id='foot'>&copy; 2017 1st Light Energy | Alden Dirks</p> 
                 
 			</footer>
 

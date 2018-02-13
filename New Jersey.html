@@ -15,7 +15,7 @@
 
         <body>
 		 
-            <header>
+            <header id='HJ'>
                 
                 <h1 id='Title'> New Jersey </h1>
                 
@@ -24,29 +24,31 @@
             <nav>
                   
                 <ul>
-                        <li><a href='Home.html'>Home</a></li>
+                        <li><a class='Ja' href='index.html'>Home</a></li>
                         
                         <li class='dropdown'>  
                             
-                            <a href='javascript:void(0)' class='dropbtn'>Areas</a>
+                            <a href='javascript:void(0)' class='Ja'>Areas</a>
                             
                         <div class='dropdown-content'>
-                            <a href='Brooklyn.html'>Brooklyn</a>
-                            <a href='Queens.html'>Queens</a>
-                            <a href='New Jersey.html'>New Jersey</a>
-                            <a href='Manteca.html'>Manteca</a>
-                            <a href='Bakersfield.html'>Bakersfield</a>  
+                            <a class='Ja' href='Brooklyn.html'>Brooklyn</a>
+                            <a class='Ja' href='Queens.html'>Queens</a>
+                            <a class='Ja' href='New Jersey.html'>New Jersey</a>
+                            <a class='Ja' href='Manteca.html'>Manteca</a>
+                            <a class='Ja' href='Bakersfield.html'>Bakersfield</a>  
                         </div>
                         
                     </li>
                     
-                    <li><a href='Tracker.html'>Tracker</a></li>
+                    <li><a class='Ja' href='Tracker.html'>Tracker</a></li>
                       
                 </ul>
                     
             </nav>
             
             <main>
+                
+                <div>
 
                     <iframe id='Jersey' src='https://docs.google.com/spreadsheets/d/e/2PACX-1vSzrL1NrT6gDVUPDsBCPWdUACqv5JfdxAgF7ePCrRsATOR2M2A529vxFWAZqANUpfQqwBoXNkT7aGXZ/pubhtml?gid=1509036929&amp;single=true&amp;range=B6:AB27&amp;widget=false&amp;chrome=false' frameborder='0'></iframe>
                 
@@ -58,13 +60,13 @@
     <script>
       function initMap() {
           
-        var jamaica = {lat: 40.6945529, lng: -73.8028778};
+        var nj = {lat: 40.5549881, lng: -74.4126216};
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 10,
-          center: jamaica
+          center: nj
         });
         var marker = new google.maps.Marker({
-          position: jamaica,
+          position: nj,
           map: map
         });
           
@@ -128,110 +130,104 @@
         });
           // Define the LatLng coordinates for the polygon's path. https://developers.google.com/maps/documentation/javascript/shapes
         var Area = [
-          {lat: 40.95916 , lng: -73.38258}, 
- {lat: 40.95934 , lng: -73.40761}, 
- {lat: 40.95692 , lng: -73.41464}, 
- {lat: 40.92831 , lng: -73.40867}, 
- {lat: 40.91318 , lng: -73.41953}, 
- {lat: 40.93371 , lng: -73.42729}, 
- {lat: 40.95036 , lng: -73.46287}, 
- {lat: 40.95122 , lng: -73.48929}, 
- {lat: 40.92589 , lng: -73.50366}, 
- {lat: 40.89167 , lng: -73.47859}, 
- {lat: 40.87662 , lng: -73.47566},
-  {lat: 40.90259 , lng: -73.49677}, 
- {lat: 40.92131 , lng: -73.52147}, 
- {lat: 40.91785 , lng: -73.53854}, 
- {lat: 40.91898 , lng: -73.56616}, 
- {lat: 40.90748 , lng: -73.63823},
-  {lat: 40.88073 , lng: -73.66176}, 
- {lat: 40.8382 , lng: -73.65863}, 
- {lat: 40.86008 , lng: -73.67472}, 
- {lat: 40.87655 , lng: -73.71172},
-  {lat: 40.86923 , lng: -73.73165}, 
- {lat: 40.86466 , lng: -73.7387}, 
- {lat: 40.84379 , lng: -73.74132}, 
- {lat: 40.83155 , lng: -73.72928}, 
- {lat: 40.83222 , lng: -73.72548},
-  {lat: 40.83626 , lng: -73.7144}, 
- {lat: 40.82523 , lng: -73.70727},
-  {lat: 40.81137 , lng: -73.71203}, 
- {lat: 40.82232 , lng: -73.71936}, 
- {lat: 40.82968 , lng: -73.73299}, 
- {lat: 40.83693 , lng: -73.74601}, 
- {lat: 40.844 , lng: -73.75743},
-  {lat: 40.83797 , lng: -73.7626},
-  {lat: 40.81215 , lng: -73.76951},
-  {lat: 40.7903 , lng: -73.75819}, 
- {lat: 40.77236 , lng: -73.75832},
-  {lat: 40.78457 , lng: -73.76738},
-  {lat: 40.79653 , lng: -73.7642},
-  {lat: 40.80223 , lng: -73.77159},
-  {lat: 40.79854 , lng: -73.78741}, 
- {lat: 40.80465 , lng: -73.81917},
-  {lat: 40.79919 , lng: -73.85317}, 
- {lat: 40.78774 , lng: -73.86968}, 
- {lat: 40.78312 , lng: -73.87511}, 
- {lat: 40.78357 , lng: -73.88484}, 
- {lat: 40.79266 , lng: -73.90332}, 
- {lat: 40.79136 , lng: -73.91407}, 
- {lat: 40.78463 , lng: -73.91925}, 
- {lat: 40.77802 , lng: -73.92906}, 
- {lat: 40.78048 , lng: -73.93406}, 
- {lat: 40.77719 , lng: -73.93898},
-  {lat: 40.77127 , lng: -73.93879},
-  {lat: 40.74401 , lng: -73.96357}, 
- {lat: 40.73172 , lng: -73.96693}, 
- {lat: 40.71006 , lng: -73.9751},
-  {lat: 40.70421 , lng: -74.00175}, 
- {lat: 40.69198 , lng: -74.00972},
-  {lat: 40.68106 , lng: -74.02428}, 
- {lat: 40.66337 , lng: -74.02387}, 
- {lat: 40.6405 , lng: -74.04573}, 
- {lat: 40.61715 , lng: -74.05511},
-  {lat: 40.56954 , lng: -74.01401},
-  {lat: 40.56493 , lng: -73.99756}, 
- {lat: 40.57854 , lng: -73.90419},
-  {lat: 40.57392 , lng: -73.89304}, 
- {lat: 40.57977 , lng: -73.87353}, 
- {lat: 40.59937 , lng: -73.87528}, 
- {lat: 40.61387 , lng: -73.88646}, 
- {lat: 40.62789 , lng: -73.87659}, 
- {lat: 40.63958 , lng: -73.85553}, 
- {lat: 40.64465 , lng: -73.82611}, 
- {lat: 40.63181 , lng: -73.79492}, 
- {lat: 40.6207 , lng: -73.77589}, 
- {lat: 40.61102 , lng: -73.77938},
-  {lat: 40.59299 , lng: -73.81513},
-  {lat: 40.58769 , lng: -73.84819}, 
- {lat: 40.57044 , lng: -73.88437}, 
- {lat: 40.57243 , lng: -73.89905},
-  {lat: 40.55381 , lng: -73.95364}, 
- {lat: 40.53755 , lng: -73.94271}, 
- {lat: 40.58069 , lng: -73.78324}, 
- {lat: 40.58104 , lng: -73.58394}, 
- {lat: 40.59219 , lng: -73.57398}, 
- {lat: 40.63868 , lng: -73.47519}, 
- {lat: 40.66235 , lng: -73.3213}, 
- {lat: 40.69937 , lng: -73.23396}, 
- {lat: 40.69161 , lng: -73.14938},
-  {lat: 40.71248 , lng: -73.11629},
-  {lat: 40.71981 , lng: -73.06123}, 
- {lat: 40.9333 , lng: -73.15058}, 
- {lat: 40.9165 , lng: -73.24027}, 
- {lat: 40.93615 , lng: -73.33752}, 
- {lat: 40.93949 , lng: -73.36331},
+          {lat: 41.14169, lng: -74.23127}, 
+{lat: 41.05486, lng: -74.30292},
+ {lat: 40.92092, lng: -74.38715}, 
+{lat: 40.83453, lng: -74.40271},
+ {lat: 40.73579, lng: -74.42257},
+ {lat: 40.59886, lng: -74.50766}, 
+{lat: 40.5134, lng: -74.61879}, 
+{lat: 40.25869, lng: -74.84786}, 
+{lat: 40.25059, lng: -74.84193}, 
+{lat: 40.24537, lng: -74.83566}, 
+{lat: 40.23651, lng: -74.81522},
+ {lat: 40.22961, lng: -74.79478},
+ {lat: 40.21904, lng: -74.77606},
+ {lat: 40.20641, lng: -74.76587},
+ {lat: 40.1896, lng: -74.75666},
+ {lat: 40.18328, lng: -74.75157}, 
+{lat: 40.17644, lng: -74.73498}, 
+{lat: 40.15857, lng: -74.72113},
+ {lat: 40.1475, lng: -74.72365}, 
+{lat: 40.13881, lng: -74.73627}, 
+{lat: 40.13458, lng: -74.74648},
+ {lat: 40.13535, lng: -74.75532},
+ {lat: 40.13296, lng: -74.76416},
+ {lat: 40.12025, lng: -74.78578},
+ {lat: 40.12476, lng: -74.80431}, 
+{lat: 40.12748, lng: -74.82076}, 
+{lat: 40.12032, lng: -74.82896},
+ {lat: 40.10049, lng: -74.83808}, 
+{lat: 40.09589, lng: -74.85132},
+ {lat: 40.09141, lng: -74.85651},
+ {lat: 40.08403, lng: -74.86003}, 
+{lat: 40.08136, lng: -74.87325}, 
+{lat: 40.07548, lng: -74.88871},
+ {lat: 40.07055, lng: -74.91276},
+ {lat: 40.0712, lng: -74.92447},
+ {lat: 40.05201, lng: -74.96849},
+ {lat: 40.04253, lng: -74.98306},
+ {lat: 40.01936, lng: -75.01494}, 
+{lat: 40.01561, lng: -75.03544},
+ {lat: 40.00704, lng: -75.05242}, 
+{lat: 39.98795, lng: -75.06261},
+ {lat: 39.97806, lng: -75.0728}, 
+{lat: 39.97301, lng: -75.10211},
+ {lat: 39.96554, lng: -75.12021},
+ {lat: 39.95375, lng: -75.13514},
+ {lat: 39.93123, lng: -75.13683},
+ {lat: 39.91988, lng: -75.12992},
+ {lat: 39.89821, lng: -75.13195}, 
+{lat: 39.88234, lng: -75.14635}, 
+{lat: 39.8822, lng: -75.17719}, 
+{lat: 39.87876, lng: -75.19219}, 
+{lat: 39.8587, lng: -75.22562}, 
+{lat: 39.85494, lng: -75.24442},
+ {lat: 39.84938, lng: -75.27316},
+ {lat: 39.84804, lng: -75.30328},
+ {lat: 39.79472, lng: -75.27081}, 
+{lat: 39.74396, lng: -75.22236},
+ {lat: 39.72591, lng: -75.15194},
+ {lat: 39.72792, lng: -75.07259}, 
+{lat: 39.77609, lng: -74.9962}, 
+{lat: 39.89999, lng: -74.79106},
+ {lat: 39.95842, lng: -74.67314}, 
+{lat: 40.00786, lng: -74.61306},
+ {lat: 40.21473, lng: -74.4984}, 
+{lat: 40.37282, lng: -74.41602}, 
+{lat: 40.42243, lng: -74.3642},
+ {lat: 40.45632, lng: -74.33092},
+ {lat: 40.4908, lng: -74.25579}, 
+{lat: 40.52421, lng: -74.12985}, 
+{lat: 40.6035, lng: -74.03864},
+ {lat: 40.63789, lng: -74.06085},
+ {lat: 40.66081, lng: -74.05032},
+ {lat: 40.70084, lng: -74.02582},
+ {lat: 40.71223, lng: -74.02416}, 
+{lat: 40.75736, lng: -74.01293},
+ {lat: 40.78518, lng: -73.99449}, 
+{lat: 40.80805, lng: -73.97606},
+ {lat: 40.82682, lng: -73.96347}, 
+{lat: 40.84921, lng: -73.95329},
+ {lat: 40.89684, lng: -73.92606},
+ {lat: 40.93685, lng: -73.91218},
+ {lat: 40.98332, lng: -73.89641},
+ {lat: 40.99769, lng: -73.89439},
+ {lat: 40.99754, lng: -73.90559},
+ {lat: 41.00076, lng: -73.90958},
+ {lat: 41.07774, lng: -74.08364}, 
+{lat: 41.11503, lng: -74.16707}
 
         ];
 
         // Construct the polygon.
         var brooklynmap = new google.maps.Polygon({
           paths: Area,
-          strokeColor: '#8e7cc3',
-          strokeOpacity: 0,
-          strokeWeight: 0,
-          fillColor: '#8e7cc3',
-          fillOpacity: .75
+          strokeColor: '#6aa84f',
+          strokeOpacity: 0.8,
+          strokeWeight: 2,
+          fillColor: '#93c47d',
+          fillOpacity: .50
         });
         brooklynmap.setMap(map);
       }
@@ -239,12 +235,29 @@
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBjlm5bAx930RBvKscTLF-2WFwcxPPnDZw&libraries=places&callback=initMap"></script>
                     
                 </div>
+                </div>
+                
+                <div id='Bottom'>
+                    <section id='notes'>
+                     <h2>Area Notes</h2>
+                        <p class='note'>- No Appointments M,TH  8AM - 2PM</p>
+                        <p class='note'>- No more than 2 appointments an hour</p>
+                        <p class='note'>- South Plainsfield is Main Office</p>
+                    </section>
+                    
+                    <section id='Jbuttons'>
+                        <a href='https://www.google.com/get/sunroof#p=0' target='_blank'>Project Sunroof</a>
+                        
+                        <a href='https://docs.google.com/forms/d/e/1FAIpQLScLsNTiOvBiZMW60TXUJzX9aOmjkTJLfgwaAG-U0o5HeeQgEA/viewform' target='popup' onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLScLsNTiOvBiZMW60TXUJzX9aOmjkTJLfgwaAG-U0o5HeeQgEA/viewform','Submission','width=600,height=400')">Submission tool</a>
+                    </section>
+                
+                </div>
                 
             </main>
             
             <footer>		
                 
-				  <p>&copy; 2017 1st Light Energy | Alden Dirks</p> 
+				  <p id='foot'>&copy; 2017 1st Light Energy | Alden Dirks</p> 
                 
 			</footer>
 
