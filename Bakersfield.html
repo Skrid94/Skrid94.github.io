@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+
+    <html>
+
+        <head>
+
+            <meta charset='utf-8'>
+
+            <title>New Jersey</title>
+            
+
+            <link href='Styles/Styles.css' type='text/css' rel='stylesheet'/>
+
+        </head>
+
+        <body>
+		 
+            <header>
+                
+                <h1 id='Title'> Bakersfield </h1>
+                
+            </header>
+                
+            <nav>
+                  
+                <ul>
+                        <li><a href='Home.html'>Home</a></li>
+                        
+                        <li class='dropdown'>  
+                            
+                            <a href='javascript:void(0)' class='dropbtn'>Areas</a>
+                            
+                        <div class='dropdown-content'>
+                            <a href='Brooklyn.html'>Brooklyn</a>
+                            <a href='Queens.html'>Queens</a>
+                            <a href='New Jersey.html'>New Jersey</a>
+                            <a href='Manteca.html'>Manteca</a>
+                            <a href='Bakersfield.html'>Bakersfield</a>  
+                        </div>
+                        
+                    </li>
+                    
+                    <li><a href='Tracker.html'>Tracker</a></li>
+                      
+                </ul>
+                    
+            </nav>
+            
+            <main>
+
+                    <iframe id='Bakersfield' src='https://docs.google.com/spreadsheets/d/e/2PACX-1vSzrL1NrT6gDVUPDsBCPWdUACqv5JfdxAgF7ePCrRsATOR2M2A529vxFWAZqANUpfQqwBoXNkT7aGXZ/pubhtml?gid=818120128&amp;single=true&amp;range=B6:AJ26&amp;widget=false&amp;chrome=false' frameborder='0'></iframe>
+                
+                <div id='Map'>
+    <input id="pac-input" class="controls" type="text" placeholder="Search Box">
+    
+      
+    <div id="map"></div>
+    <script>
+      function initMap() {
+          
+        var jamaica = {lat: 40.6945529, lng: -73.8028778};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 10,
+          center: jamaica
+        });
+        var marker = new google.maps.Marker({
+          position: jamaica,
+          map: map
+        });
+          
+        // Create the search box and link it to the UI element.
+        var input = document.getElementById('pac-input');
+        var searchBox = new google.maps.places.SearchBox(input);
+        map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+
+        // Bias the SearchBox results towards current map's viewport.
+        map.addListener('bounds_changed', function() {
+          searchBox.setBounds(map.getBounds());
+        });
+
+        var markers = [];
+        // Listen for the event fired when the user selects a prediction and retrieve
+        // more details for that place.
+        searchBox.addListener('places_changed', function() {
+          var places = searchBox.getPlaces();
+
+          if (places.length == 0) {
+            return;
+          }
+
+          // Clear out the old markers.
+          markers.forEach(function(marker) {
+            marker.setMap(null);
+          });
+          markers = [];
+
+          // For each place, get the icon, name and location.
+          var bounds = new google.maps.LatLngBounds();
+          places.forEach(function(place) {
+            if (!place.geometry) {
+              console.log("Returned place contains no geometry");
+              return;
+            }
+            var icon = {
+              url: place.icon,
+              size: new google.maps.Size(71, 71),
+              origin: new google.maps.Point(0, 0),
+              anchor: new google.maps.Point(17, 34),
+              scaledSize: new google.maps.Size(25, 25)
+            };
+
+            // Create a marker for each place.
+            markers.push(new google.maps.Marker({
+              map: map,
+              icon: icon,
+              title: place.name,
+              position: place.geometry.location
+            }));
+
+            if (place.geometry.viewport) {
+              // Only geocodes have viewport.
+              bounds.union(place.geometry.viewport);
+            } else {
+              bounds.extend(place.geometry.location);
+            }
+          });
+          map.fitBounds(bounds);
+        });
+          // Define the LatLng coordinates for the polygon's path. https://developers.google.com/maps/documentation/javascript/shapes
+        var Area = [
+          {lat: 40.95916 , lng: -73.38258}, 
+ {lat: 40.95934 , lng: -73.40761}, 
+ {lat: 40.95692 , lng: -73.41464}, 
+ {lat: 40.92831 , lng: -73.40867}, 
+ {lat: 40.91318 , lng: -73.41953}, 
+ {lat: 40.93371 , lng: -73.42729}, 
+ {lat: 40.95036 , lng: -73.46287}, 
+ {lat: 40.95122 , lng: -73.48929}, 
+ {lat: 40.92589 , lng: -73.50366}, 
+ {lat: 40.89167 , lng: -73.47859}, 
+ {lat: 40.87662 , lng: -73.47566},
+  {lat: 40.90259 , lng: -73.49677}, 
+ {lat: 40.92131 , lng: -73.52147}, 
+ {lat: 40.91785 , lng: -73.53854}, 
+ {lat: 40.91898 , lng: -73.56616}, 
+ {lat: 40.90748 , lng: -73.63823},
+  {lat: 40.88073 , lng: -73.66176}, 
+ {lat: 40.8382 , lng: -73.65863}, 
+ {lat: 40.86008 , lng: -73.67472}, 
+ {lat: 40.87655 , lng: -73.71172},
+  {lat: 40.86923 , lng: -73.73165}, 
+ {lat: 40.86466 , lng: -73.7387}, 
+ {lat: 40.84379 , lng: -73.74132}, 
+ {lat: 40.83155 , lng: -73.72928}, 
+ {lat: 40.83222 , lng: -73.72548},
+  {lat: 40.83626 , lng: -73.7144}, 
+ {lat: 40.82523 , lng: -73.70727},
+  {lat: 40.81137 , lng: -73.71203}, 
+ {lat: 40.82232 , lng: -73.71936}, 
+ {lat: 40.82968 , lng: -73.73299}, 
+ {lat: 40.83693 , lng: -73.74601}, 
+ {lat: 40.844 , lng: -73.75743},
+  {lat: 40.83797 , lng: -73.7626},
+  {lat: 40.81215 , lng: -73.76951},
+  {lat: 40.7903 , lng: -73.75819}, 
+ {lat: 40.77236 , lng: -73.75832},
+  {lat: 40.78457 , lng: -73.76738},
+  {lat: 40.79653 , lng: -73.7642},
+  {lat: 40.80223 , lng: -73.77159},
+  {lat: 40.79854 , lng: -73.78741}, 
+ {lat: 40.80465 , lng: -73.81917},
+  {lat: 40.79919 , lng: -73.85317}, 
+ {lat: 40.78774 , lng: -73.86968}, 
+ {lat: 40.78312 , lng: -73.87511}, 
+ {lat: 40.78357 , lng: -73.88484}, 
+ {lat: 40.79266 , lng: -73.90332}, 
+ {lat: 40.79136 , lng: -73.91407}, 
+ {lat: 40.78463 , lng: -73.91925}, 
+ {lat: 40.77802 , lng: -73.92906}, 
+ {lat: 40.78048 , lng: -73.93406}, 
+ {lat: 40.77719 , lng: -73.93898},
+  {lat: 40.77127 , lng: -73.93879},
+  {lat: 40.74401 , lng: -73.96357}, 
+ {lat: 40.73172 , lng: -73.96693}, 
+ {lat: 40.71006 , lng: -73.9751},
+  {lat: 40.70421 , lng: -74.00175}, 
+ {lat: 40.69198 , lng: -74.00972},
+  {lat: 40.68106 , lng: -74.02428}, 
+ {lat: 40.66337 , lng: -74.02387}, 
+ {lat: 40.6405 , lng: -74.04573}, 
+ {lat: 40.61715 , lng: -74.05511},
+  {lat: 40.56954 , lng: -74.01401},
+  {lat: 40.56493 , lng: -73.99756}, 
+ {lat: 40.57854 , lng: -73.90419},
+  {lat: 40.57392 , lng: -73.89304}, 
+ {lat: 40.57977 , lng: -73.87353}, 
+ {lat: 40.59937 , lng: -73.87528}, 
+ {lat: 40.61387 , lng: -73.88646}, 
+ {lat: 40.62789 , lng: -73.87659}, 
+ {lat: 40.63958 , lng: -73.85553}, 
+ {lat: 40.64465 , lng: -73.82611}, 
+ {lat: 40.63181 , lng: -73.79492}, 
+ {lat: 40.6207 , lng: -73.77589}, 
+ {lat: 40.61102 , lng: -73.77938},
+  {lat: 40.59299 , lng: -73.81513},
+  {lat: 40.58769 , lng: -73.84819}, 
+ {lat: 40.57044 , lng: -73.88437}, 
+ {lat: 40.57243 , lng: -73.89905},
+  {lat: 40.55381 , lng: -73.95364}, 
+ {lat: 40.53755 , lng: -73.94271}, 
+ {lat: 40.58069 , lng: -73.78324}, 
+ {lat: 40.58104 , lng: -73.58394}, 
+ {lat: 40.59219 , lng: -73.57398}, 
+ {lat: 40.63868 , lng: -73.47519}, 
+ {lat: 40.66235 , lng: -73.3213}, 
+ {lat: 40.69937 , lng: -73.23396}, 
+ {lat: 40.69161 , lng: -73.14938},
+  {lat: 40.71248 , lng: -73.11629},
+  {lat: 40.71981 , lng: -73.06123}, 
+ {lat: 40.9333 , lng: -73.15058}, 
+ {lat: 40.9165 , lng: -73.24027}, 
+ {lat: 40.93615 , lng: -73.33752}, 
+ {lat: 40.93949 , lng: -73.36331},
+
+        ];
+
+        // Construct the polygon.
+        var brooklynmap = new google.maps.Polygon({
+          paths: Area,
+          strokeColor: '#8e7cc3',
+          strokeOpacity: 0,
+          strokeWeight: 0,
+          fillColor: '#8e7cc3',
+          fillOpacity: .75
+        });
+        brooklynmap.setMap(map);
+      }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBjlm5bAx930RBvKscTLF-2WFwcxPPnDZw&libraries=places&callback=initMap"></script>
+                    
+                </div>
+                
+            </main>
+            
+            <footer>		
+                
+				  <p>&copy; 2017 1st Light Energy | Alden Dirks</p> 
+                
+			</footer>
+
+		</body>
+        
+	</html>
