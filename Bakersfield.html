@@ -32,7 +32,6 @@
                             
                         <div class='dropdown-content'>
                             <a class='BKa' href='Brooklyn.html'>Brooklyn</a>
-                            <a class='BKa' href='Queens.html'>Queens</a>
                             <a class='BKa' href='New Jersey.html'>New Jersey</a>
                             <a class='BKa' href='Manteca.html'>Manteca</a>
                             <a class='BKa' href='Bakersfield.html'>Bakersfield</a>  
@@ -48,11 +47,18 @@
             
             <main>
                 
-                <div id='Top'>
+                <div class='top-container'>
+                
+                <div id='left'>
 
                     <iframe id='Bakersfield' src='https://docs.google.com/spreadsheets/d/e/2PACX-1vSzrL1NrT6gDVUPDsBCPWdUACqv5JfdxAgF7ePCrRsATOR2M2A529vxFWAZqANUpfQqwBoXNkT7aGXZ/pubhtml?gid=818120128&amp;single=true&amp;range=B6:AJ26&amp;widget=false&amp;chrome=false' frameborder='0'></iframe>
                 
+                </div>
+                
+                <div id='right'>
+                
                 <div id='Map'>
+                
     <input id="pac-input" class="controls" type="text" placeholder="Search Box">
     
       
@@ -130,7 +136,7 @@
         });
           // Define the LatLng coordinates for the polygon's path. https://developers.google.com/maps/documentation/javascript/shapes
         var Area = [
-          {lat: 35.54871 , lng: -117.61045}, {lat: 35.74113 , lng: -117.6758}, {lat: 35.99978 , lng: -117.73566}, {lat: 36.28905 , lng: -117.94327}, {lat: 36.37058 , lng: -118.88583}, {lat: 36.36546 , lng: -119.63936}, {lat: 36.23126 , lng: -120.24553}, {lat: 35.97106 , lng: -120.41419}, {lat: 35.53433 , lng: -120.23863}, {lat: 35.18504 , lng: -119.88728}, {lat: 34.9784 , lng: -119.41508}, {lat: 34.94252 , lng: -118.9319}, {lat: 34.94534 , lng: -118.68436}, {lat: 34.98923 , lng: -117.96338}
+          {lat: 35.47689, lng: -119.99208},  {lat: 35.13451, lng: -119.59554},  {lat: 35.03028, lng: -119.38989},  {lat: 34.76591, lng: -118.92417},  {lat: 34.76284, lng: -118.5848},  {lat: 34.96855, lng: -118.03788},  {lat: 35.21509, lng: -117.78091},  {lat: 35.46088, lng: -117.63379},  {lat: 35.77922, lng: -117.61371},  {lat: 36.17113, lng: -117.69814},  {lat: 36.5453, lng: -117.91889},  {lat: 36.64488, lng: -118.67247},  {lat: 36.14223, lng: -120.39042} 
 
         ];
 
@@ -149,22 +155,28 @@
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBjlm5bAx930RBvKscTLF-2WFwcxPPnDZw&libraries=places&callback=initMap"></script>
                     
                 </div>
+                    
+                </div>
+                    
                 </div>
                 
-                <div id='Bottom'>
-                    <section id='notes'>
-                     <h2>Area Notes</h2>
-                        <p class='note'>-No Appointments T, TH  10AM - 12:30PM</p>
-                    </section>
+                <div class='bottom-container'>
                     
-                    <section id='BKbuttons'>
+                    <div>
+                        <h2>Area Notes</h2>
+                        
+                        <p>-No Appointments T, TH 10AM - 12:30PM</p>
+                        
+                    </div>
+                    
+                    <div id='BKbuttons'>
                         <a href='https://www.google.com/get/sunroof#p=0' target='_blank'>Project Sunroof</a>
                         
                         <a href='https://docs.google.com/forms/d/e/1FAIpQLScLsNTiOvBiZMW60TXUJzX9aOmjkTJLfgwaAG-U0o5HeeQgEA/viewform' target='popup' onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLScLsNTiOvBiZMW60TXUJzX9aOmjkTJLfgwaAG-U0o5HeeQgEA/viewform','Submission','width=600,height=400')">Submission tool</a>
-                    </section>
-                
+                    </div>
+                    
                 </div>
-                
+                            
             </main>
             
             <footer>		

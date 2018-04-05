@@ -32,7 +32,6 @@
                             
                         <div class='dropdown-content'>
                             <a class='Ja' href='Brooklyn.html'>Brooklyn</a>
-                            <a class='Ja' href='Queens.html'>Queens</a>
                             <a class='Ja' href='New Jersey.html'>New Jersey</a>
                             <a class='Ja' href='Manteca.html'>Manteca</a>
                             <a class='Ja' href='Bakersfield.html'>Bakersfield</a>  
@@ -48,9 +47,16 @@
             
             <main>
                 
-                <div>
+                <div class='top-container'>
+                
+                <div id='left'>
 
                     <iframe id='Jersey' src='https://docs.google.com/spreadsheets/d/e/2PACX-1vSzrL1NrT6gDVUPDsBCPWdUACqv5JfdxAgF7ePCrRsATOR2M2A529vxFWAZqANUpfQqwBoXNkT7aGXZ/pubhtml?gid=1509036929&amp;single=true&amp;range=B6:AB27&amp;widget=false&amp;chrome=false' frameborder='0'></iframe>
+                    
+                    
+                </div>    
+                    
+                <div id='right'>
                 
                 <div id='Map'>
     <input id="pac-input" class="controls" type="text" placeholder="Search Box">
@@ -235,22 +241,28 @@
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBjlm5bAx930RBvKscTLF-2WFwcxPPnDZw&libraries=places&callback=initMap"></script>
                     
                 </div>
+                    
+                    </div>
+                    
                 </div>
                 
-                <div id='Bottom'>
-                    <section id='notes'>
-                     <h2>Area Notes</h2>
-                        <p class='note'>- No Appointments M,TH  8AM - 2PM</p>
-                        <p class='note'>- No more than 2 appointments an hour</p>
-                        <p class='note'>- South Plainsfield is Main Office</p>
-                    </section>
+                <div class='bottom-container'>
                     
-                    <section id='Jbuttons'>
+                    <div>
+                        <h2>Area Notes</h2>
+                        
+                        <p>- No Appointments M,TH 8AM - 2PM</p>
+                        
+                        <p>- No more than 2 appointments an hour</p>
+                        
+                    </div>
+        
+                    <div id='Jbuttons'>
                         <a href='https://www.google.com/get/sunroof#p=0' target='_blank'>Project Sunroof</a>
                         
                         <a href='https://docs.google.com/forms/d/e/1FAIpQLScLsNTiOvBiZMW60TXUJzX9aOmjkTJLfgwaAG-U0o5HeeQgEA/viewform' target='popup' onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLScLsNTiOvBiZMW60TXUJzX9aOmjkTJLfgwaAG-U0o5HeeQgEA/viewform','Submission','width=600,height=400')">Submission tool</a>
-                    </section>
-                
+                    </div>
+                    
                 </div>
                 
             </main>

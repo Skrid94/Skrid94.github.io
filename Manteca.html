@@ -32,7 +32,6 @@
                             
                         <div class='dropdown-content'>
                             <a class='Ma' href='Brooklyn.html'>Brooklyn</a>
-                            <a class='Ma' href='Queens.html'>Queens</a>
                             <a class='Ma' href='New Jersey.html'>New Jersey</a>
                             <a class='Ma' href='Manteca.html'>Manteca</a>
                             <a class='Ma' href='Bakersfield.html'>Bakersfield</a>  
@@ -48,9 +47,15 @@
             
             <main>
                 
-                <div>
+                <div class='top-container'>
+                
+                <div id='left'>
 
                     <iframe id='Manteca' src='https://docs.google.com/spreadsheets/d/e/2PACX-1vSzrL1NrT6gDVUPDsBCPWdUACqv5JfdxAgF7ePCrRsATOR2M2A529vxFWAZqANUpfQqwBoXNkT7aGXZ/pubhtml?gid=1096026326&amp;single=true&amp;range=B6:AJ26&amp;widget=false&amp;chrome=false' frameborder='0'></iframe>
+                    
+                </div>
+                    
+                <div id='right'>
                 
                 <div id='Map'>
     <input id="pac-input" class="controls" type="text" placeholder="Search Box">
@@ -130,26 +135,7 @@
         });
           // Define the LatLng coordinates for the polygon's path.
   var triangleCoords = [
-    {lat: 39.37624, lng: -121.87211}, 
-{lat: 39.16654, lng: -122.13596},
- {lat: 38.74083, lng: -122.21295},
- {lat: 38.03545, lng: -122.06193}, 
-{lat: 37.64323, lng: -121.71725},
- {lat: 37.03655, lng: -121.14461},
- {lat: 36.4045, lng: -120.64825}, 
-{lat: 35.99325, lng: -120.28472}, 
-{lat: 35.33997, lng: -119.52067},
- {lat: 35.08484, lng: -119.1992},
- {lat: 35.01548, lng: -118.89015},
- {lat: 35.14714, lng: -118.51315}, 
-{lat: 35.6783, lng: -117.88245},
- {lat: 35.88584, lng: -117.90768},
- {lat: 36.07064, lng: -117.99333}, 
-{lat: 37.81264, lng: -120.13541},
- {lat: 38.52266, lng: -120.36767}, 
-{lat: 39.25094, lng: -120.77262}, 
-{lat: 39.3777, lng: -121.20504},
- {lat: 39.40669, lng: -121.53857}
+    {lat: 34.34514, lng: -116.87608},  {lat: 34.37433, lng: -117.47501},  {lat: 34.28978, lng: -117.79365},  {lat: 34.16878, lng: -118.04638},  {lat: 36.09302, lng: -120.34806},  {lat: 36.82018, lng: -120.96604},  {lat: 37.27427, lng: -121.40447},  {lat: 38.00319, lng: -121.96374},  {lat: 38.46088, lng: -122.25385},  {lat: 38.80104, lng: -122.37307},  {lat: 39.06014, lng: -122.49859},  {lat: 39.35228, lng: -122.61314},  {lat: 39.71431, lng: -122.58076},  {lat: 39.84825, lng: -122.3009},  {lat: 39.88083, lng: -121.93315},  {lat: 39.8678, lng: -121.35205},  {lat: 39.58858, lng: -121.06208},  {lat: 39.25721, lng: -120.77211},  {lat: 38.58038, lng: -120.38128},  {lat: 37.70455, lng: -119.7754},  {lat: 36.83154, lng: -118.91435},  {lat: 36.26302, lng: -118.66716},  {lat: 36.03387, lng: -120.27118},  {lat: 34.18114, lng: -118.05745},  {lat: 33.46883, lng: -117.17872},  {lat: 33.62749, lng: -116.2684},  {lat: 33.80832, lng: -116.10755},  {lat: 34.1344, lng: -116.62511}   
   ];
 
   // Construct the polygon.
@@ -167,22 +153,28 @@
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBjlm5bAx930RBvKscTLF-2WFwcxPPnDZw&libraries=places&callback=initMap"></script>
                     
                 </div>
-                
+                    
+                </div>
+                    
                 </div>
                 
-                <div id='Bottom'>
-                    <section id='notes'>
-                     <h2>Area Notes</h2>
-                        <p class='note'>- No Appointments T, TH 10AM - 12:30PM</p>
-                        <p class='note'>- Sunday Appointments are Allowed </p>
-                    </section>
+                <div class='bottom-container'>
                     
-                    <section id='Mbuttons'>
+                    <div>
+                        <h2>Area Notes</h2>
+                        
+                        <p>- No Appointments T, TH 10AM - 12:30PM</p>
+                        
+                        <p>- Sunday Appointments are Allowed</p>
+                        
+                    </div>
+                    
+                    <div id='Mbuttons'>
                         <a href='https://www.google.com/get/sunroof#p=0' target='_blank'>Project Sunroof</a>
                         
                         <a href='https://docs.google.com/forms/d/e/1FAIpQLScLsNTiOvBiZMW60TXUJzX9aOmjkTJLfgwaAG-U0o5HeeQgEA/viewform' target='popup' onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLScLsNTiOvBiZMW60TXUJzX9aOmjkTJLfgwaAG-U0o5HeeQgEA/viewform','Submission','width=600,height=400')">Submission tool</a>
-                    </section>
-                
+                    </div>
+                    
                 </div>
                 
             </main>
